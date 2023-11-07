@@ -1,47 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 23:24:07 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/06 18:56:13 by acherraq         ###   ########.fr       */
+/*   Created: 2023/11/07 13:03:38 by acherraq          #+#    #+#             */
+/*   Updated: 2023/11/07 13:17:39 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h"	
 
-char	*ft_strchr(const char *str, int c)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-	int		i;
-	char	f;
+	size_t			i;
+	unsigned char	*ptr;
 
-	if (str == NULL)
+	ptr = (unsigned char *)str;
+	i = 0;
+	while (i < n)
 	{
-		return (NULL);
-	}
-	while (*str != '\0')
-	{
-		if (*str == c)
+		if (ptr[i] == (unsigned char)c)
 		{
-			return ((char *)str);
+			return ((void *)ptr + i);
 		}
-		str++;
+		i++;
 	}
-	if (c == '\0')
-	{
-		return ((char *)str);
-	}
-	else 
-		return (NULL);
+	return (NULL);
 }
 /*
-int main()
+int	main()
 {
-	char s[23] = "hello world!";
-	printf("%s\n",s);
-printf("%s\n",ft_strchr(s, 'e'));	
+	char	*s = "hello world!";
+	printf("%s\n", s);
+	printf("%s\n",ft_memchr(s,'e',5));
 
 }
 */

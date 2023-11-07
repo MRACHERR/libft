@@ -1,47 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 23:24:07 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/06 18:56:13 by acherraq         ###   ########.fr       */
+/*   Created: 2023/11/07 13:18:45 by acherraq          #+#    #+#             */
+/*   Updated: 2023/11/07 13:43:25 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t num)
 {
-	int		i;
-	char	f;
+	size_t			i;
+	unsigned char	*p1;
+	unsigned char	*p2;
+	int				d;
 
-	if (str == NULL)
+	i = 0;
+	p1 = (unsigned char *)s1;
+	p2 = (unsigned char *)s2;
+	while (i < num)
 	{
-		return (NULL);
-	}
-	while (*str != '\0')
-	{
-		if (*str == c)
+		d = p1[i] - p2[i];
+		if (d != 0)
 		{
-			return ((char *)str);
+			break ;
 		}
-		str++;
+		i++;
 	}
-	if (c == '\0')
-	{
-		return ((char *)str);
-	}
-	else 
-		return (NULL);
+	return (d);
 }
 /*
-int main()
+int	main()
 {
-	char s[23] = "hello world!";
-	printf("%s\n",s);
-printf("%s\n",ft_strchr(s, 'e'));	
-
+	char	*s = "hello world!";
+	char	*p = "hello1 world!1";
+	printf("%s\n", s);
+	printf("%s\n", p);
+	printf("%d\n",ft_memcmp(s,p,5));
 }
 */

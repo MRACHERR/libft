@@ -1,47 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 23:24:07 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/06 18:56:13 by acherraq         ###   ########.fr       */
+/*   Created: 2023/11/06 19:01:24 by acherraq          #+#    #+#             */
+/*   Updated: 2023/11/06 20:09:40 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c )
 {
 	int		i;
-	char	f;
+	size_t	l;
+	char	*str;
+	char	find;
 
-	if (str == NULL)
+	l = ft_strlen(s);
+	find = (char)c;
+	str = (char *)s;
+	while (l > 0)
 	{
-		return (NULL);
+		if (str[l] == find)
+			return (str + l);
+		l--;
 	}
-	while (*str != '\0')
-	{
-		if (*str == c)
-		{
-			return ((char *)str);
-		}
-		str++;
-	}
-	if (c == '\0')
-	{
-		return ((char *)str);
-	}
-	else 
+	if (str[l] == find)
+		return (str + l);
+	else
 		return (NULL);
 }
 /*
-int main()
+
+int	main()
 {
-	char s[23] = "hello world!";
-	printf("%s\n",s);
-printf("%s\n",ft_strchr(s, 'e'));	
+	char	* s = "hello world!";
+	printf("%s\n", s);
+	printf("%s\n",ft_strrchr(s,'l'));
 
 }
 */

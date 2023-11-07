@@ -1,47 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 23:24:07 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/06 18:56:13 by acherraq         ###   ########.fr       */
+/*   Created: 2023/11/06 20:12:10 by acherraq          #+#    #+#             */
+/*   Updated: 2023/11/06 20:34:29 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int		i;
-	char	f;
+	size_t	i;
 
-	if (str == NULL)
+	i = 0;
+	while ((str1[i] || str2[i]) && n > 0)
 	{
-		return (NULL);
+		if (str1[i] != str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		i++;
+		n--;
 	}
-	while (*str != '\0')
-	{
-		if (*str == c)
-		{
-			return ((char *)str);
-		}
-		str++;
-	}
-	if (c == '\0')
-	{
-		return ((char *)str);
-	}
-	else 
-		return (NULL);
+	return (0);
 }
 /*
-int main()
+int	main()
 {
-	char s[23] = "hello world!";
-	printf("%s\n",s);
-printf("%s\n",ft_strchr(s, 'e'));	
+	char	*s = "hello world!";
+	char	*p = "hello1 world!1";
+	printf("%s\n", s);
+	printf("%s\n", p);
+	printf("%d\n",ft_strncmp(s,p,5));
 
 }
 */
