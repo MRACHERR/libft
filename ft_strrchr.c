@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:01:24 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/06 20:09:40 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/11/15 20:21:42 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char	*ft_strrchr(const char *s, int c )
 {
-	int		i;
 	size_t	l;
 	char	*str;
 	char	find;

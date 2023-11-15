@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:07:43 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/07 20:10:26 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/11/15 20:22:15 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int	ft_atoi(const char *str)
 	int	i;
 	int	r;
 	int	neg;
-
+	
+	i = 0;
 	while (is_space(str[i]) == 0)
 	{
 		i++;

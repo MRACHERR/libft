@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:19:57 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/03 21:28:42 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/11/15 20:19:15 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 void	*ft_memmove(void *str1, const void *str2, size_t n)
 {
-	size_t	i;
 	char	*tmp;
 
 	tmp = malloc(sizeof(char) * n);
