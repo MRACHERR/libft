@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 23:24:07 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/15 20:20:36 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/11/21 17:47:37 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strchr(const char *str, int c)
 	{
 		return (NULL);
 	}
+	if (str[0] == '\0')
+		return ((char *)str); 
 	while (*str != '\0')
 	{
 		if (*str == c)

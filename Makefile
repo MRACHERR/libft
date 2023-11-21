@@ -6,7 +6,7 @@
 #    By: acherraq <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:47:14 by acherraq          #+#    #+#              #
-#    Updated: 2023/11/15 20:23:34 by acherraq         ###   ########.fr        #
+#    Updated: 2023/11/19 18:52:27 by acherraq         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,5 +97,7 @@ clean:
 fclean: clean
 	$(RM) $(NAME) $(NAME_B)
 
+all: $(NAME)
+	
 # Target to rebuild everything
 re: fclean all
