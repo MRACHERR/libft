@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 20:21:26 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/22 22:22:47 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/11/23 20:43:44 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,17 +89,18 @@ char *ft_strtrim(char const *s1, char const *set)
 	ptr = (char *)malloc((finish - start + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
-	ft_strlcpy(ptr, s1 + start, finish - start - 1);
+	ft_strlcpy(ptr, s1 + start, finish - start + 1);
 	return (ptr);
 }
 /*
 int main()
 {
-	char *s = "     hello the world that we live in !!!!!      ";
+//	char *s = "lorem \n ipsum \t dolor \n sit \t amet";
+	char *s = "lorem ipsum dolor sit amet";
 	char *p = "  f  ";
 	printf("%s\n", s);
 	printf("%s\n", ft_strtrim(s," "));
-	printf("%d\n", ft_ending(p, " "));
-printf("%d\n", ft_begining(p, " "));
+	printf("%d\n", ft_ending(s, " "));
+printf("%d\n", ft_begining(s, " "));
 }
 */
