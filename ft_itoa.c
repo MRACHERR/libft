@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 14:43:12 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/26 15:23:43 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/11/26 17:20:06 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 int ft_l(long int n)
 {
 	long int len;
-	int i;
-	if (n >= 0)
+	if (n > 0)
 		len = 0;
 	else
 		len = 1;
@@ -43,7 +42,7 @@ char	*ft_itoa(int n)
 
 	l = ft_l(n);
 	s = (char *)malloc(sizeof(char) * (l + 1));
-	sign = (n > 0)? 1 : 0;
+	sign = (n >= 0)? 1 : 0;
 	if (!s)	
 		return (NULL);
 	s[l] = '\0';
@@ -56,14 +55,13 @@ char	*ft_itoa(int n)
 	}
 	if (sign == 0)	
 		s[0] = '-';
-			
 	return (s);
 }
 /*
 int main()
 {
 	int	l;
-	l = -100;
+	l = 0;
 	printf("%s\n", ft_itoa(l));
 
 }
