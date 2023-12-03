@@ -6,35 +6,39 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:44:54 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/29 17:02:32 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/11/29 18:18:24 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void ft_putnbr_fd(int n, int fd)
+void	d_nbr(int n, int fd)
 {
+	if (n >= 10)
+		d_nbr(n / 10, fd);
+	write(fd, &"0123456789"[n % 10], 1);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (fd < 0)
+		return ;
 	if (n == -2147483648)
 	{
-		ft_putstr_fd("-2147483648", fd);
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	else if (n < 0)
+	if (n < 0)
 	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-n, fd);
+		write(fd, "-", 1);
+		n *= -1;
 	}
-	else if ( n >= 10)
-	{
-		ft_putnbr_fd( n / 10 , fd);
-		ft_putchar_fd(n % 10 + '0', fd);
-	}
-	else
-		ft_putchar_fd(n + '0', fd);
+	d_nbr(n, fd);
 }
 /*
 int main()
 {
-	ft_putnbr_fd(1212, 1);
+	ft_putnbr_fd(-57, 2);
 }
 */

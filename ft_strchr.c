@@ -6,34 +6,28 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 23:24:07 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/22 22:05:47 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/03 13:05:32 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char		*ft_strchr(const char *s, int c)
 {
-	if (str == NULL)
+	char	find;
+	int		i;
+
+	find = (unsigned char)c;
+	i = 0;
+	while (s[i] != '\0')
 	{
-		return (NULL);
+		if (s[i] == find)
+			return ((char *)s + i);
+		i++;
 	}
-	if (str[0] == '\0')
-		return ((char *)str); 
-	while (*str != '\0')
-	{
-		if (*str == c)
-		{
-			return ((char *)str);
-		}
-		str++;
-	}
-	if (c == '\0')
-	{
-		return ((char *)str);
-	}
-	else 
-		return (NULL);
+	if (s[i] == find)
+		return ((char *)s + i);
+	return (0);
 }
 /*
 int main()

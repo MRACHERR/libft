@@ -6,7 +6,7 @@
 #    By: acherraq <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:47:14 by acherraq          #+#    #+#              #
-#    Updated: 2023/11/19 18:52:27 by acherraq         ###   ########.fr        #
+#    Updated: 2023/11/29 17:39:03 by acherraq         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ RM = rm -f
 FILES = ft_memset \
 		ft_bzero \
 		ft_memcpy \
-		ft_memccpy \
 		ft_memmove \
 		ft_memchr \
 		ft_memcmp \
@@ -43,6 +42,7 @@ FILES = ft_memset \
 		ft_substr \
 		ft_strjoin \
 		ft_strtrim \
+		ft_striteri \
 		ft_split \
 		ft_itoa \
 		ft_strmapi \

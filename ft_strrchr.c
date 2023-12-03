@@ -29,8 +29,7 @@ char	*ft_strrchr(const char *s, int c )
 	}
 	if (str[l] == find)
 		return (str + l);
-	else
-		return (NULL);
+	return (NULL);
 }
 /*
 

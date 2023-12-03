@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 21:40:48 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/21 17:44:50 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/03 13:08:52 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	*ft_strdup(const char *string)
 	size_t		i;
 	char		*str;
 
+	len = 0;
 	len = ft_strlen(string);
 	str = (char *)malloc((len + 1) * sizeof(*string));
 	if (!str)
