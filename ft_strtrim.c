@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 20:21:26 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/23 20:43:44 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/03 15:54:12 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int ft_begining(const char *str ,const char *s)
+int	ft_begining(const char *str, const char *s)
 {
 	size_t	l;
 	size_t	i;
@@ -48,15 +47,16 @@ int ft_begining(const char *str ,const char *s)
 	{
 		if (ft_strchr(s, str[i]) == 0)
 		{
-			break;
+			break ;
 		}
 		i++;
 	}
 	return (i);
-} 
-int ft_ending(const char *str, const char *s)
+}
+
+int	ft_ending(const char *str, const char *s)
 {
-	size_t	l;	
+	size_t	l;
 	size_t	i;
 
 	i = 0;
@@ -65,17 +65,17 @@ int ft_ending(const char *str, const char *s)
 	{
 		if (ft_strchr(s, str[l - i - 1]) == 0)
 		{
-			break;
+			break ;
 		}
 		i++;
-		
 	}
 	return (l - i);
 }
-char *ft_strtrim(char const *s1, char const *set)
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int start;
-	int	finish;	
+	int		start;
+	int		finish;
 	char	*ptr;
 
 	if (s1 == NULL)
@@ -92,15 +92,3 @@ char *ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(ptr, s1 + start, finish - start + 1);
 	return (ptr);
 }
-/*
-int main()
-{
-//	char *s = "lorem \n ipsum \t dolor \n sit \t amet";
-	char *s = "lorem ipsum dolor sit amet";
-	char *p = "  f  ";
-	printf("%s\n", s);
-	printf("%s\n", ft_strtrim(s," "));
-	printf("%d\n", ft_ending(s, " "));
-printf("%d\n", ft_begining(s, " "));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 17:56:24 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/21 20:11:23 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/03 15:53:11 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <strings.h>
 
-char *ft_substr(char const *s, unsigned int start,size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	size_t	l;
@@ -30,12 +30,3 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
 	ft_strlcpy(sub, s + start, len + 1);
 	return (sub);
 }
-/*
-int main()
-{
-	char *s = "geeks";
-	printf("%s\n", ft_substr(s, 3, 3));
-	printf("%s\n", substr(s, 3, 3));
-
-}
-*/

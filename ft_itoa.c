@@ -6,16 +6,17 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 14:43:12 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/26 17:20:06 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/03 15:58:31 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int ft_l(long int n)
+int	ft_l(long int n)
 {
-	long int len;
+	long int	len;
+
 	if (n > 0)
 		len = 0;
 	else
@@ -27,33 +28,37 @@ int ft_l(long int n)
 	}
 	return (len);
 }
-long int ft_abs(long int n)
+
+long int	ft_abs(long int n)
 {
 	if (n < 0)
 		return (-n);
 	else
 		return (n);
 }
+
 char	*ft_itoa(int n)
 {
-	int	l;
+	int		l;
 	char	*s;
 	int		sign;
 
 	l = ft_l(n);
 	s = (char *)malloc(sizeof(char) * (l + 1));
-	sign = (n >= 0)? 1 : 0;
-	if (!s)	
+	sign = 0;
+	if (n >= 0)
+		sign = 1;
+	if (!s)
 		return (NULL);
 	s[l] = '\0';
-	l--;	
+	l--;
 	while (l >= 0)
 	{
 		s[l] = 48 + ft_abs(n % 10);
 		n = n / 10;
 		l--;
 	}
-	if (sign == 0)	
+	if (sign == 0)
 		s[0] = '-';
 	return (s);
 }
