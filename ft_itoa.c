@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 14:43:12 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/03 15:58:31 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 22:53:08 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	ft_l(long int n)
+static int	ft_l(long int n)
 {
 	long int	len;
 
@@ -29,7 +28,7 @@ int	ft_l(long int n)
 	return (len);
 }
 
-long int	ft_abs(long int n)
+static long int	ft_abs(long int n)
 {
 	if (n < 0)
 		return (-n);
@@ -62,12 +61,3 @@ char	*ft_itoa(int n)
 		s[0] = '-';
 	return (s);
 }
-/*
-int main()
-{
-	int	l;
-	l = 0;
-	printf("%s\n", ft_itoa(l));
-
-}
-*/

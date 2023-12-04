@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 21:59:01 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/04 19:58:57 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 22:42:03 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 void	ft_bzero(void *str, size_t len)
 {

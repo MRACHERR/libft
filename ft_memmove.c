@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:19:57 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/23 19:56:41 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 23:00:28 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	i = 0;
 	n_dst = (unsigned char *)dst;
 	n_src = (unsigned char *)src;
-	if (dst == src || n == 0)
+	if (dst == src)
 		return (dst);
 	if (dst < src)
 	{
@@ -38,19 +38,3 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-/*
-int main()
-{
-   char src[50] = "this is a good nyancat !\r\n";
-char src1[50] = "this is a good nyancat !\r\n";
-   char dest1[50];
-   char dest[50];
-   //strcpy(dest,"Heloooo!!");
-   printf("Before memcpy dest = %s\n", dest);
-   ft_memmove(dest, src, strlen(src)+1);
-   printf("After memcpy dest = %s\n", dest);
-   memmove(dest1, src1, strlen(src1)+1);
-   printf("After memcpy dest = %s\n", dest1);	
-   return(0);
-}
-*/

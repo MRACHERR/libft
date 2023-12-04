@@ -6,11 +6,10 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 23:46:49 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/03 15:49:00 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 22:39:32 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)

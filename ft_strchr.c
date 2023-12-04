@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 23:24:07 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/04 20:01:07 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 23:13:57 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	char	find;
 	int		i;
 
-	find = (unsigned char)c;
+	find = (char)c;
 	i = 0;
 	while (s[i] != '\0')
 	{

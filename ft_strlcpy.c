@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 23:32:07 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/21 20:56:10 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 22:39:40 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -36,12 +35,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (len);
 }
-/*
-int main ()
-{
-	char s[7] = "hello!";
-	char d[10];
-	printf("%s\n",s);
-	ft_strlcpy(d, s, 4);	
-}
-*/

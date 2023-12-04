@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:07:43 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/03 16:04:46 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 23:29:43 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == ' ' || c == '\n' || c == '\t' || c == '\v' || c == '\f'
 		|| c == '\r')
@@ -47,11 +47,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * nbr);
 }
-/*
-int main()
-{
-	char *s = "      -44343";
-	printf("%d\n", ft_atoi(s));
-
-}
-*/

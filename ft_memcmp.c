@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:18:45 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/03 15:32:19 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 23:23:46 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ int	ft_memcmp(const void *b1, const void *b2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main()
-{
-	char	*s = "hello world!";
-	char	*p = "hello1 world!1";
-	printf("%s\n", s);
-	printf("%s\n", p);
-	printf("%d\n",ft_memcmp(s,p,5));
-}
-*/

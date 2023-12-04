@@ -1,18 +1,5 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: acherraq <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/15 16:47:14 by acherraq          #+#    #+#              #
-#    Updated: 2023/12/04 20:08:55 by acherraq         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
-
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
@@ -50,45 +37,31 @@ FILES = ft_memset \
 		ft_putstr_fd \
 		ft_putendl_fd \
 		ft_putnbr_fd \
-		ft_strtok \
-		ft_strcmp \
-		get_next_line \
-
-FILES_B = ft_lstnew \
-	  		ft_lstadd_front \
-	  		ft_lstsize \
-	  		ft_lstlast \
-	  		ft_lstadd_back \
-	  		ft_lstdelone \
-	  		ft_lstclear \
-	  		ft_lstiter \
-	  		ft_lstmap
 
 SRCS_DIR = ./
 
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
-SRCS_B = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES_B)))
+
 
 OBJS_DIR = ./
 
 OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
-OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
-$(OBJS_DIR)%.o: $(SRCS_DIR)%.c
+
+$(OBJS_DIR)%.o: $(SRCS_DIR)%.c libft.h
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 
-$(NAME_B): $(OBJS_B)
-	$(AR) $@ $^
-
 clean:
-	$(RM) $(OBJS) $(OBJS_B)
+	$(RM) $(OBJS) 
 
 fclean: clean
-	$(RM) $(NAME) $(NAME_B)
+	$(RM) $(NAME)
 
 all: $(NAME)
 	
 re: fclean all
+
+.PHONY: clean

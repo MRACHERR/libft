@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:03:38 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/07 13:17:39 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 22:42:52 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-int	main()
-{
-	char	*s = "hello world!";
-	printf("%s\n", s);
-	printf("%s\n",ft_memchr(s,'e',5));
-
-}
-*/

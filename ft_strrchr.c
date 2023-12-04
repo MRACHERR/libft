@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:01:24 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/15 20:21:42 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 22:40:54 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,3 @@ char	*ft_strrchr(const char *s, int c )
 		return (str + l);
 	return (NULL);
 }
-/*
-
-int	main()
-{
-	char	* s = "hello world!";
-	printf("%s\n", s);
-	printf("%s\n",ft_strrchr(s,'l'));
-
-}
-*/

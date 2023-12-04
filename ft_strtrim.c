@@ -3,40 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 20:21:26 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/03 15:54:12 by acherraq         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 20:21:12 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/22 20:21:12 by acherraq         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/21 21:38:14 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/22 20:17:58 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 22:46:04 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_begining(const char *str, const char *s)
+static int	ft_begining(const char *str, const char *s)
 {
 	size_t	l;
 	size_t	i;
@@ -54,7 +30,7 @@ int	ft_begining(const char *str, const char *s)
 	return (i);
 }
 
-int	ft_ending(const char *str, const char *s)
+static int	ft_ending(const char *str, const char *s)
 {
 	size_t	l;
 	size_t	i;
