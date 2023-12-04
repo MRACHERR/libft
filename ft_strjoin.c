@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 20:19:46 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/21 21:28:52 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 19:47:52 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len_s1;
 	size_t	len_s2;
 
-	len_s1 = ft_strlen(s1);
-	len_s2 = ft_strlen(s2);
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
+	if (s1 == NULL)
+		return (ft_strdup(s2));
+	if (s2 == NULL)
+		return (ft_strdup(s1));
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
 	str = (char *)malloc((len_s1 + len_s2 + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
@@ -31,14 +35,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	strlcat(str + len_s1, s2, len_s2 + 1);
 	return (str);
 }
-/*
-int main()
-{
-	char *s = "hello";
-	char *j = " world!";
-	printf("%s\n", s);
-	printf("%s\n", s);
-	printf("%s\n", ft_strjoin(s , j));
-
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 23:24:07 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/03 15:38:58 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 20:01:07 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s + i);
 	return (0);
 }
-/*
-int main()
-{
-	char s[23] = "hello world!";
-	printf("%s\n",s);
-printf("%s\n",ft_strchr(s, 'e'));	
-
-}
-*/

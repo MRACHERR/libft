@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 21:59:01 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/20 20:12:29 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 19:58:57 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ void	ft_bzero(void *str, size_t len)
 		i++;
 	}
 }
-/*int main()
-{
-	char a[12] = "myname";
-	printf("%s\n",a);
-	ft_bzero(a,1);	
-	printf("%s\n",a);
-}
-*/

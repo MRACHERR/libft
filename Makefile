@@ -6,7 +6,7 @@
 #    By: acherraq <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 16:47:14 by acherraq          #+#    #+#              #
-#    Updated: 2023/11/29 17:39:03 by acherraq         ###   ########.fr        #
+#    Updated: 2023/12/04 20:08:55 by acherraq         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,38 +66,29 @@ FILES_B = ft_lstnew \
 
 SRCS_DIR = ./
 
-# Full paths to source files
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
 SRCS_B = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES_B)))
 
-# Directory for object files
 OBJS_DIR = ./
 
-# Full paths to object files
 OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
-# Rule to compile C source files to object files
 $(OBJS_DIR)%.o: $(SRCS_DIR)%.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-# Target to build the main library
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 
-# Target to build the bonus library
 $(NAME_B): $(OBJS_B)
 	$(AR) $@ $^
 
-# Target to clean object files
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
 
-# Target to clean everything, including the libraries
 fclean: clean
 	$(RM) $(NAME) $(NAME_B)
 
 all: $(NAME)
 	
-# Target to rebuild everything
 re: fclean all

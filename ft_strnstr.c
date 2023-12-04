@@ -6,7 +6,7 @@
 /*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:02:33 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/07 16:30:55 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 20:02:25 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,3 @@ char	*ft_strnstr(const char *h, const char *n, size_t len)
 	}
 	return (NULL);
 }
-/*
-int main()
-{
-	char s1[30] = "pen pineapple apple pen!";
-
-	char* ptr = ft_strnstr(s1, "pine", 10);
-	printf("%s\n", ptr);
-	char* ptr1 = ft_strnstr(s1, "pine", 5);
-	printf("%s\n", ptr1);
-
-	return (0);
-}
-*/

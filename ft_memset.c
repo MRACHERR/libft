@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 19:09:25 by acherraq          #+#    #+#             */
-/*   Updated: 2023/11/20 23:31:33 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/04 19:58:00 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,3 @@ void	*ft_memset(void *str, int c, size_t len)
 	}
 	return (ptr);
 }
-/*
-int main()
-{
-	int str[100];
-	int i;
-	i = 0;
-	//printf("%s\n", str);
-	printf("%s\n", ft_memset(str, 0, 10*sizeof(str[0])));
-	while (i < 14)
-	{
-	printf("%d\n", str[i]);
-	i++;
-	}
-}
-*/
