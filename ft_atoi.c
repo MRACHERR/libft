@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:07:43 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/04 23:29:43 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/05 18:33:56 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ int	ft_atoi(const char *str)
 	while ((str[i] != '\0') && ('0' <= str[i]) && (str[i] <= '9'))
 	{
 		nbr = (nbr * 10) + (str[i] - '0');
-		if (nbr > 2147483647 && sign == 1)
+		if (nbr < 0 && sign == 1)
 			return (-1);
-		if (nbr > 2147483648 && sign == -1)
+		if (nbr < 0 && sign == -1)
 			return (0);
 		i++;
 	}

@@ -22,10 +22,8 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
-%.o : %.c
+%.o : %.c libft.h
 	$(CC) $(FLAGS) -c $< -o $@
-
-
 
 clean:
 	$(RM) $(OBJ) 
