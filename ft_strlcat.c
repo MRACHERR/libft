@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 23:46:49 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/04 22:39:32 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/05 13:45:06 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	size_t	dest_len;
 	size_t	src_len;
 
+	if ((dest == NULL || src == NULL) && dstsize == 0)
+		return (0);
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	i = 0;

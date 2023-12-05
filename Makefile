@@ -1,67 +1,38 @@
-NAME = libft.a
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
-AR = ar rcs
-RM = rm -f
-FILES = ft_memset \
-		ft_bzero \
-		ft_memcpy \
-		ft_memmove \
-		ft_memchr \
-		ft_memcmp \
-		ft_strlen \
-		ft_strlcpy \
-		ft_strlcat \
-		ft_strchr \
-		ft_strrchr \
-		ft_strnstr \
-		ft_strncmp \
-		ft_atoi \
-		ft_isalpha \
-		ft_isdigit \
-		ft_isalnum \
-		ft_isascii \
-		ft_isprint \
-		ft_toupper \
-		ft_tolower \
-		ft_calloc \
-		ft_strdup \
-		ft_substr \
-		ft_strjoin \
-		ft_strtrim \
-		ft_striteri \
-		ft_split \
-		ft_itoa \
-		ft_strmapi \
-		ft_putchar_fd \
-		ft_putstr_fd \
-		ft_putendl_fd \
-		ft_putnbr_fd \
 
-SRCS_DIR = ./
+FLAGS = -Wall -Wextra -Werror
 
-SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
+AR = ar -rcs
+
+RM = rm -rf
+
+FILES = ft_atoi ft_substr ft_strjoin ft_strtrim ft_split ft_putnbr_fd ft_strmapi ft_itoa ft_striteri ft_putchar_fd ft_putstr_fd ft_putendl_fd \
+       ft_bzero ft_strchr ft_strncmp ft_memcmp ft_memchr ft_strnstr ft_strdup ft_calloc \
+       ft_strrchr ft_tolower ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint ft_memcpy ft_memmove ft_memset ft_strlcat ft_strlcpy ft_strlen ft_toupper
 
 
-OBJS_DIR = ./
+SRC = $(FILES:=.c)
 
-OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
+OBJ = $(FILES:=.o)
+
+NAME = libft.a
+
+all : $(NAME)
+
+$(NAME) : $(OBJ)
+	$(AR) $(NAME) $(OBJ)
+
+%.o : %.c
+	$(CC) $(FLAGS) -c $< -o $@
 
 
-$(OBJS_DIR)%.o: $(SRCS_DIR)%.c libft.h
-	$(CC) $(CFLAGS) -c -o $@ $<
-
-$(NAME): $(OBJS)
-	$(AR) $@ $^
 
 clean:
-	$(RM) $(OBJS) 
+	$(RM) $(OBJ) 
 
-fclean: clean
+fclean : clean 
 	$(RM) $(NAME)
 
-all: $(NAME)
-	
-re: fclean all
+re : fclean all
 
 .PHONY: clean
