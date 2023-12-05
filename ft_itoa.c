@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 14:43:12 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/04 22:53:08 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/05 19:47:07 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ char	*ft_itoa(int n)
 
 	l = ft_l(n);
 	s = (char *)malloc(sizeof(char) * (l + 1));
+	if (!s)
+		return (NULL);
 	sign = 0;
 	if (n >= 0)
 		sign = 1;
-	if (!s)
-		return (NULL);
 	s[l] = '\0';
 	l--;
 	while (l >= 0)
