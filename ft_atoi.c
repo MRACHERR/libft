@@ -6,7 +6,7 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:07:43 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/05 18:33:56 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/08 14:39:24 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ft_atoi(const char *str)
 	long	nbr;
 	long	sign;
 	size_t	i;
+	long	temp;
 
 	nbr = 0;
 	sign = 1;
@@ -38,10 +39,11 @@ int	ft_atoi(const char *str)
 		i++;
 	while ((str[i] != '\0') && ('0' <= str[i]) && (str[i] <= '9'))
 	{
+		temp = nbr;
 		nbr = (nbr * 10) + (str[i] - '0');
-		if (nbr < 0 && sign == 1)
+		if (temp != nbr / 10 && sign == 1)
 			return (-1);
-		if (nbr < 0 && sign == -1)
+		if (temp != nbr / 10 && sign == -1)
 			return (0);
 		i++;
 	}
