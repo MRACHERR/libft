@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acherraq <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 21:49:11 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/03 17:34:27 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/11 11:40:59 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_malloc_error(char **tab)
+static char	**ft_malloc_error(char **tab, unsigned int j)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (tab[i])
+	while (i < j)
 	{
 		free(tab[i]);
 		i++;
@@ -93,7 +93,7 @@ char	**ft_split(char const *s, char c)
 		ft_get_next_str(&next_str, &next_str_len, c);
 		tab[i] = (char *)malloc(sizeof(char) * (next_str_len + 1));
 		if (!(tab[i]))
-			return (ft_malloc_error(tab));
+			return (ft_malloc_error(tab, i));
 		ft_strlcpy(tab[i], next_str, next_str_len + 1);
 		i++;
 	}

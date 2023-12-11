@@ -6,12 +6,11 @@
 /*   By: acherraq <acherraq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:44:54 by acherraq          #+#    #+#             */
-/*   Updated: 2023/12/04 23:25:17 by acherraq         ###   ########.fr       */
+/*   Updated: 2023/12/11 12:14:25 by acherraq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static void	d_nbr(int n, int fd)
 {
